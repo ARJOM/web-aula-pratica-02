@@ -1,0 +1,28 @@
+header, main {
+    padding: 24px;
+}
+
+header, .cabecalho {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cabecalho button {
+    width: 176px;
+}
+
+.negrito{
+    font-weight: 700;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+}

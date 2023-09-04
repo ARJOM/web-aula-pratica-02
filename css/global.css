@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #FFF;
+}
+
+button {
+    height: 40px;
+    color: #FFF;
+    background-color: #000;
+    border: none;
+}
+
+button.second {
+    color: #000;
+    background-color: #FFF;
+    border: 1px #000 solid;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border: 1px #000 solid;
+    padding: 4px;
+}
