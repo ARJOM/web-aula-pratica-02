@@ -1,4 +1,10 @@
 const conteudoContainer = document.getElementById("content");
+const modal = document.getElementById("detailNaver");
+const fecharModal = document.getElementById("close");
+
+fecharModal.addEventListener("click", () => {
+    modal.close();
+})
 
 let usuarios = getObjectLocalStorage("navers");
 if (usuarios === null){
@@ -20,6 +26,8 @@ const createCard = (usuario) => {
     img.alt = `Foto do usuário ${usuario.nome}`
     img.classList.add('profile-pic')
 
+    img.addEventListener("click", () => openDialog(usuario))
+
     const nome = document.createElement("p");
     nome.innerText = usuario.nome
     nome.classList.add("negrito")
@@ -38,6 +46,16 @@ const createCard = (usuario) => {
     
     return container
 }
+
+function openDialog(usuario){
+    modal.showModal()
+    const titulo = document.createElement('h1');
+    titulo.innerText = usuario.nome;
+    document.getElementById("modalContent").appendChild(
+        titulo
+    )
+}
+
 
 function setObjectLocalStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
