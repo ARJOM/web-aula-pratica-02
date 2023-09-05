@@ -2,7 +2,9 @@ const conteudoContainer = document.getElementById("content");
 
 let usuarios = getObjectLocalStorage("navers");
 if (usuarios === null){
-    usuarios = [{nome: "Ricart", cargo: "Professor", idade:96, tempoDeEmpresa: 58, projetos: "Emrchiever, Wippy Pay, Project X, Sick Kids, Brain", imagem: "https://avatars.githubusercontent.com/u/38226399?v=4"}, {nome: "Ricart", cargo: "Professor", idade:96, tempoDeEmpresa: 58, projetos: "Emrchiever, Wippy Pay, Project X, Sick Kids, Brain", imagem: "https://avatars.githubusercontent.com/u/38226399?v=4"}, {nome: "Ricart", cargo: "Professor", idade:96, tempoDeEmpresa: 58, projetos: "Emrchiever, Wippy Pay, Project X, Sick Kids, Brain", imagem: "https://avatars.githubusercontent.com/u/38226399?v=4"}, {nome: "Ricart", cargo: "Professor", idade:96, tempoDeEmpresa: 58, projetos: "Emrchiever, Wippy Pay, Project X, Sick Kids, Brain", imagem: "https://avatars.githubusercontent.com/u/38226399?v=4"}]
+    usuarios = []
+    setObjectLocalStorage('navers',usuarios)
+    // usuarios = [{nome: "Ricart", cargo: "Professor", idade:96, tempoDeEmpresa: 58, projetos: "Emrchiever, Wippy Pay, Project X, Sick Kids, Brain", imagem: "https://avatars.githubusercontent.com/u/38226399?v=4"}, {nome: "Ricart", cargo: "Professor", idade:96, tempoDeEmpresa: 58, projetos: "Emrchiever, Wippy Pay, Project X, Sick Kids, Brain", imagem: "https://avatars.githubusercontent.com/u/38226399?v=4"}, {nome: "Ricart", cargo: "Professor", idade:96, tempoDeEmpresa: 58, projetos: "Emrchiever, Wippy Pay, Project X, Sick Kids, Brain", imagem: "https://avatars.githubusercontent.com/u/38226399?v=4"}, {nome: "Ricart", cargo: "Professor", idade:96, tempoDeEmpresa: 58, projetos: "Emrchiever, Wippy Pay, Project X, Sick Kids, Brain", imagem: "https://avatars.githubusercontent.com/u/38226399?v=4"}]
 }
 
 
@@ -16,8 +18,7 @@ const createCard = (usuario) => {
     const img = document.createElement("img");
     img.src = usuario.imagem;
     img.alt = `Foto do usuário ${usuario.nome}`
-    img.width = "300";
-    img.height = "300";
+    img.classList.add('profile-pic')
 
     const nome = document.createElement("p");
     nome.innerText = usuario.nome
@@ -32,8 +33,10 @@ const createCard = (usuario) => {
     container.appendChild(img)
     container.appendChild(nome)
     container.appendChild(cargo)
+
+    container.classList.add("card")
     
-    return container    
+    return container
 }
 
 function setObjectLocalStorage(key, value) {

@@ -23,6 +23,11 @@ main {
 
 #content {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.profile-pic {
+    width: 100%;
+    aspect-ratio: 1;
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/novo.css" type="text/css"/>
+    <title>Novo Naver</title>
+</head>
+<body>
+    <header>
+        <img src="../assets/logo.png" alt="Logo Nave"/>
+        <a href="../index.html">Sair</a>
+    </header>    
+    <main>
+        <section>
+            <div>
+                <img onclick="history.back()" src="../assets/Arrow-Icon.png" alt="Botão voltar"/>
+                <h2>Adicionar Naver</h2>
+            </div>
+            <form action="javascript:;" id="form-cadastro">
+                <div class="form-columns">
+                <label for="nome">
+                    Nome
+                    <input placeholder="Nome" name="nome"/>
+                </label>
+                <label for="cargo">
+                    Cargo
+                    <input placeholder="Cargo" name="cargo"/>
+                </label>
+                <label for="idade">
+                    Idade
+                    <input placeholder="Idade" name="idade"/>
+                </label>
+                <label for="tempo">
+                    Tempo de Empresa
+                    <input placeholder="Tempo de Empresa" name="tempo"/>
+                </label>
+                <label for="projetos">
+                    Projetos que participou
+                    <input placeholder="Projetos que participou" name="projetos"/>
+                </label>
+                <label for="imagem">
+                    URL da foto do Naver
+                    <input placeholder="URL da foto do Naver" name="imagem"/>
+                </label>
+            </div>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </section>
+    </main>
+    <script src="../js/new-user.js"></script>
+</body>
+</html>

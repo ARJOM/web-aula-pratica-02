@@ -1,0 +1,34 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main>section {
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+form>button {
+    width: 180px;
+}
+
+.form-columns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+section>div {
+    display: flex;
+}
